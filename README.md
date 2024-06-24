@@ -9,7 +9,7 @@
 - Apache Airflow
 - PostgreSQL
 
-## Initial step: Generate parquet data
+## Initial step: Prepare data
 <ol>
   <li><strong>Setup virtual environment for the project</strong></li>
       
@@ -17,7 +17,7 @@
       python -m venv [venv_name]
       [venv_name]\Scripts\activate
       
-  <li><strong>Prepare data</strong></li>
+  <li><strong>Generate data</strong></li>
 
       pip install -r requirements.txt
       python sampledata_new.py
