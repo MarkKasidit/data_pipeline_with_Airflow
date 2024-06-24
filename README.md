@@ -36,7 +36,7 @@
   <li><strong>Prepare the workplace</strong></li>
     <p> Create <strong>logs</strong> folder for contains logs from task execution and scheduler, and <strong>plugins</strong> folder for the custom plugins</p>
 
-    mkdir -p ./logs ./plugins
+    mkdir -p .\logs .\plugins
 
   <li><strong>Start docker-compose</strong></li>
 
