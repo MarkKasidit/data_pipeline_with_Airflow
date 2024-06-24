@@ -26,7 +26,7 @@
 
 ## Setup Apache Airflow with Docker
 <ol>
-  <li><strong>Download docker-compose.yml</strong></li>
+  <li><strong>Download docker-compose.yaml</strong></li>
     <p> The provided file is the version used in the project. If you want to build from scratch, you can run the script below: </p> 
 
     curl -LfO https://airflow.apache.org/docs/apache-airflow/2.5.1/docker-compose.yaml
