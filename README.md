@@ -39,3 +39,36 @@
   <li><strong>Start docker-compose</strong></li>
 
     docker-compose up -d
+
+</ol>
+
+## Usage
+<ol>
+  <li><strong>Access Airflow Web UI</strong></li>
+    <p>Open your browser and go to http://localhost:8080. Use the default credentials (username: airflow, password: airflow) to log in.</p>
+
+  <li><strong>Trigger the DAG</strong></li>
+    <p>Find the <strong>upload_data</strong> DAG and toggle it to "On".</p>
+</ol>
+
+
+## (Optional) Install python requirements via extending airflow docker image
+<p> This step occur due to the need to run <strong>sampledata_new.py</strong> via Airflow.</p>
+  <ol>
+    <li><strong>Create Dockerfile</strong></li>
+      <p> For this project, I build the Dockerfile as the script below </p>
+
+        FROM apache/airflow:2.5.1-python3.8
+        USER airflow
+        COPY requirements.txt .
+        RUN pip install --upgrade pip
+        RUN pip install --no-cache-dir -r requirements.txt
+        
+  <li><strong>Build Docker Image from Dockerfile</strong></li>
+
+      docker build . --tag extending_airflow:latest
+
+  <li><strong>Change Airflow Image</strong></li>
+    <p>Open <strong>docker-compose.yaml</strong> and change the Airflow Image to <strong>extending_airflow:latest</strong></p>
+</ol>
+      
