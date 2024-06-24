@@ -38,6 +38,10 @@
 
     mkdir .\logs .\plugins
 
+  <p>Make sure to put the path of the parquet data at the <strong>docker-compose.yaml</strong> on the <strong>volumes</strong> part</p>
+
+    ./data_sample:/opt/airflow/data_sample
+  
   <li><strong>Start docker-compose</strong></li>
 
     docker-compose up -d
@@ -48,6 +52,9 @@
 <ol>
   <li><strong>Access Airflow Web UI</strong></li>
     <p>Open your browser and go to http://localhost:8080. Use the default credentials (username: airflow, password: airflow) to log in.</p>
+
+  <li><strong>Setup the Postgres connection</strong></li>
+    <p>Find the <strong>Admin</strong> menu and go to <strong>Connections</strong>, then add the connection detail of your Postgres database.</p>
 
   <li><strong>Trigger the DAG</strong></li>
     <p>Find the <strong>upload_data</strong> DAG and toggle it to "On".</p>
