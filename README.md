@@ -17,7 +17,7 @@
       python -m venv [venv_name]
       [venv_name]\Scripts\activate
       
-  <li><strong>Generate the data</strong></li>
+  <li><strong>Prepare data</strong></li>
 
       pip install -r requirements.txt
       python sampledata_new.py
